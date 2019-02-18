@@ -6,45 +6,5 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="196dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="230dp"
-        android:text="@string/addButton"
-        android:onClick="addButtonClick"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/subButton"
-        android:layout_width="196dp"
-        android:layout_height="124dp"
-        android:layout_marginBottom="253dp"
-        android:text="@string/subButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/multButton"
-        android:layout_width="196dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="230dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:text="@string/multButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/divButton"
-        android:layout_width="196dp"
-        android:layout_height="124dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="253dp"
-        android:text="@string/divButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

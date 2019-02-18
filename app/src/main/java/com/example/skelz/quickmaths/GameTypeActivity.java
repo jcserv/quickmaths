@@ -1,5 +1,7 @@
 package com.example.skelz.quickmaths;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -14,22 +16,26 @@ public class GameTypeActivity extends AppCompatActivity {
     }
 
     public void addButtonClick(View v) {
-        //Start intent for the mode
-        //Pass addition mode parameter??
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
+        i.putExtra("mode", 1);
+        startActivity(i);
     }
 
     public void subButtonClick(View v) {
-        //Start intent for the mode
-        //Pass addition mode parameter??
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
+        i.putExtra("mode", 2);
+        startActivity(i);
     }
 
     public void multButtonClick(View v) {
-        //Start intent for the mode
-        //Pass addition mode parameter??
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
+        i.putExtra("mode", 3);
+        startActivity(i);
     }
 
     public void divButtonClick(View v) {
-        //Start intent for the mode
-        //Pass addition mode parameter??
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
+        i.putExtra("mode", 4);
+        startActivity(i);
     }
 }
