@@ -129,7 +129,7 @@
         android:layout_marginEnd="26dp"
         android:layout_marginRight="26dp"
         android:layout_marginBottom="646dp"
-        app:fontFamily="sans-serif-medium"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="@string/mode"
         android:textSize="26sp"

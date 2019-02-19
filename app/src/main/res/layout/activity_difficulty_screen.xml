@@ -7,18 +7,65 @@
     tools:context=".DifficultyScreen">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="300dp" />
+        android:id="@+id/difficultyTitle"
+        android:layout_width="369dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:contentDescription="@string/difficulty"
+        app:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/difficulty"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/easyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/easyButton"
         android:layout_width="357dp"
         android:layout_height="80dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="106dp" />
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="@string/easyButton"
+        app:layout_constraintBottom_toTopOf="@+id/mediumButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyTitle" />
+
+    <Button
+        android:id="@+id/mediumButton"
+        android:layout_width="357dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="@string/mediumButton"
+        app:layout_constraintBottom_toTopOf="@+id/hardButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easyButton" />
+
+    <Button
+        android:id="@+id/hardButton"
+        android:layout_width="357dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:backgroundTint="@android:color/red"
+        android:text="@string/hardButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediumButton" />
 </android.support.constraint.ConstraintLayout>

@@ -6,5 +6,9 @@
     <string name="subButton">SUBTRACTION</string>
     <string name="creditsButton">CREDITS</string>
     <string name="randomButton">RANDOM</string>
+    <string name="easyButton">EASY</string>
+    <string name="mediumButton">MEDIUM</string>
+    <string name="hardButton">HARD</string>
     <string name="mode">MODE SELECT</string>
+    <string name="difficulty">DIFFICULTY</string>
 </resources>
