@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
+import java.util.Random;
+
 public class GameScreen extends AppCompatActivity {
     private int answerIndex = 0;
     private ArrayList<String> answers;
@@ -27,11 +29,11 @@ public class GameScreen extends AppCompatActivity {
 
     }
 
-    private void StartGame(int minRange, int maxRange, int gameMode){
+    private void StartGame(int minRange, int maxRange, int gameMode) {
         int operand1 = getRandomInRange(minRange, maxRange);
         int operand2 = getRandomInRange(minRange, maxRange);
 
-        switch(gameMode){
+        switch (gameMode) {
             case 1:
             case 2:
                 answers = createAnswersAddSub(gameMode, minRange, maxRange, operand1, operand2);
@@ -45,18 +47,18 @@ public class GameScreen extends AppCompatActivity {
                 break;
         }
 
-        Button display = (Button)findViewById(R.id.answerButton1);
+        Button display = (Button) findViewById(R.id.answerButton1);
         display.setText(answers.get(0));
-        display = (Button)findViewById(R.id.answerButton2);
+        display = (Button) findViewById(R.id.answerButton2);
         display.setText(answers.get(1));
-        display = (Button)findViewById(R.id.answerButton3);
+        display = (Button) findViewById(R.id.answerButton3);
         display.setText(answers.get(2));
-        display = (Button)findViewById(R.id.answerButton4);
+        display = (Button) findViewById(R.id.answerButton4);
         display.setText(answers.get(3));
 
-        TextView question = (TextView)findViewById(R.id.expressionDisplay);
+        TextView question = (TextView) findViewById(R.id.expressionDisplay);
 
-        switch(gameMode) {
+        switch (gameMode) {
             case 1:
                 question.setText(Integer.toString(operand1) + "+" + Integer.toString(operand2));
                 break;
@@ -75,12 +77,12 @@ public class GameScreen extends AppCompatActivity {
         }
     }
 
-    private ArrayList<String> createAnswersAddSub(Integer mode, int minRange, int maxRange, int operand1, int operand2){
+    private ArrayList<String> createAnswersAddSub(Integer mode, int minRange, int maxRange, int operand1, int operand2) {
 
         ArrayList<String> answers = new ArrayList<>();
         String answer;
 
-        switch(mode){
+        switch (mode) {
             case 1:
                 answers.add(Integer.toString(operand1 + operand2));
                 break;
@@ -93,10 +95,10 @@ public class GameScreen extends AppCompatActivity {
         }
         answer = answers.get(0);
 
-        for(int i = 1; i < 4; i++){
+        for (int i = 1; i < 4; i++) {
             answers.add(Integer.toString(getRandomInRange(minRange, maxRange) + Integer.parseInt(answers.get(0))));
 
-            for(int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++) {
                 if (answers.get(j) == answers.get(i)) {
                     i--;
                     break;
@@ -107,12 +109,12 @@ public class GameScreen extends AppCompatActivity {
         return shuffle(answers, answer);
     }
 
-    private ArrayList<String> shuffle(ArrayList<String> answers, String answer){
+    private ArrayList<String> shuffle(ArrayList<String> answers, String answer) {
 
         Collections.shuffle(answers);
 
-        for(int k = 0; k < 3; k++){
-            if(answers.get(k) == answer){
+        for (int k = 0; k < 3; k++) {
+            if (answers.get(k) == answer) {
                 answerIndex = k;
                 break;
             }
@@ -120,10 +122,10 @@ public class GameScreen extends AppCompatActivity {
         return answers;
     }
 
-    private ArrayList<String> createAnswersMulDiv(Integer mode, int minRange, int maxRange, int operand1, int operand2){
+    private ArrayList<String> createAnswersMulDiv(Integer mode, int minRange, int maxRange, int operand1, int operand2) {
         ArrayList<String> answers = new ArrayList<>();
         String answer = "0";
-        switch(mode){
+        switch (mode) {
             case 3:
                 answers.add(Integer.toString(operand1 * operand2));
                 answers.add(Integer.toString((operand1 - 1) * operand2));
@@ -132,9 +134,9 @@ public class GameScreen extends AppCompatActivity {
                 break;
             case 4:
                 answers.add(Integer.toString(operand1 / operand2) + " R " + Integer.toString(operand1 % operand2));
-                answers.add(Integer.toString((operand1 - 1) / operand2)+ " R " + Integer.toString((operand1-1) % operand2));
-                answers.add(Integer.toString(operand1 / (operand2 + 1))+ " R " + Integer.toString(operand1 % (operand2 + 1)));
-                answers.add(Integer.toString((operand1 - 1) / (operand2 + 1))+ " R " + Integer.toString((operand1-1) % (operand2 + 1)));
+                answers.add(Integer.toString((operand1 - 1) / operand2) + " R " + Integer.toString((operand1 - 1) % operand2));
+                answers.add(Integer.toString(operand1 / (operand2 + 1)) + " R " + Integer.toString(operand1 % (operand2 + 1)));
+                answers.add(Integer.toString((operand1 - 1) / (operand2 + 1)) + " R " + Integer.toString((operand1 - 1) % (operand2 + 1)));
                 break;
             default:
                 break;
