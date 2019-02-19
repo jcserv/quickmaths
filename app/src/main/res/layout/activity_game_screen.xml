@@ -70,18 +70,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/expressionDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="305dp"
-        android:layout_marginBottom="161dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="30sp"
+        android:text="expressionDisplay"
+        android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/answerButton2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
