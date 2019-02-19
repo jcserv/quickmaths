@@ -16,7 +16,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="subButtonClick"
-        android:text="@string/subButton"
+        android:text="@string/creditsButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -33,14 +33,14 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="subButtonClick"
-        android:text="@string/subButton"
+        android:text="@string/randomButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/creditsButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subButton" />
 
-    <Button
+    <ImageButton
         android:id="@+id/addButton"
         android:layout_width="0dp"
         android:layout_height="124dp"
@@ -51,6 +51,7 @@
         android:layout_marginRight="16dp"
         android:onClick="addButtonClick"
         android:text="@string/addButton"
+        app:srcCompat="@drawable/baseline_add_black_24"
         app:layout_constraintBottom_toTopOf="@+id/subButton"
         app:layout_constraintEnd_toStartOf="@+id/multButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -58,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/subButton"
         android:layout_width="0dp"
         android:layout_height="124dp"
@@ -69,13 +70,14 @@
         android:layout_marginRight="16dp"
         android:onClick="subButtonClick"
         android:text="@string/subButton"
+        app:srcCompat="@drawable/baseline_subtract_black_24"
         app:layout_constraintBottom_toTopOf="@+id/randomButton"
         app:layout_constraintEnd_toStartOf="@+id/divButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addButton" />
 
-    <Button
+    <ImageButton
         android:id="@+id/multButton"
         android:layout_width="0dp"
         android:layout_height="124dp"
@@ -86,13 +88,14 @@
         android:layout_marginRight="16dp"
         android:onClick="multButtonClick"
         android:text="@string/multButton"
+        app:srcCompat="@drawable/baseline_multiply_black_24"
         app:layout_constraintBottom_toTopOf="@+id/divButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/addButton"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/divButton"
         android:layout_width="0dp"
         android:layout_height="124dp"
@@ -103,10 +106,22 @@
         android:layout_marginRight="16dp"
         android:onClick="divButtonClick"
         android:text="@string/divButton"
+        app:srcCompat="@drawable/baseline_div_black_24"
         app:layout_constraintBottom_toTopOf="@+id/creditsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/subButton"
         app:layout_constraintTop_toBottomOf="@+id/multButton" />
+
+    <TextView
+        android:id="@+id/modeTitle"
+        android:layout_width="369dp"
+        android:layout_height="69dp"
+        android:text="@string/mode"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="26sp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>

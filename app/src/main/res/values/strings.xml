@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">QuickMaths</string>
-    <string name="addButton">Button</string>
-    <string name="multButton">Button</string>
-    <string name="divButton">Button</string>
-    <string name="subButton">Button</string>
+    <string name="addButton">ADDITION</string>
+    <string name="multButton">MULTIPLICATION</string>
+    <string name="divButton">DIVISION</string>
+    <string name="subButton">SUBTRACTION</string>
+    <string name="creditsButton">CREDITS</string>
+    <string name="randomButton">RANDOM</string>
+    <string name="mode">MODE SELECT</string>
 </resources>
