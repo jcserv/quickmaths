@@ -11,4 +11,8 @@
     <string name="hardButton">HARD</string>
     <string name="mode">MODE SELECT</string>
     <string name="difficulty">DIFFICULTY</string>
+    <string name="authors">AUTHORS</string>
+    <string name="anthony">Anthony Granic</string>
+    <string name="jarrod">Jarrod Servilla</string>
+    <string name="dismiss">DISMISS</string>
 </resources>
