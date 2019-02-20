@@ -13,7 +13,9 @@ import java.util.Random;
 
 public class GameScreen extends AppCompatActivity {
 //    private int answerIndex = 0;
+    private boolean random = false;
     private int minRange = 1;
+    private int difficulty = 1;
     private String correctAnswer = "0";
     private int maxRange = 10;
     private int turn = 0;
@@ -27,14 +29,27 @@ public class GameScreen extends AppCompatActivity {
         setContentView(R.layout.activity_game_screen);
 
         gameMode = getIntent().getIntExtra("mode", 1);
-        maxRange = getIntent().getIntExtra("maxRange", 1);
-        minRange = getIntent().getIntExtra("minRange", 10);
+        difficulty = getIntent().getIntExtra("difficulty", 1);
+        random = getIntent().getBooleanExtra("random", false);
 
+        setRanges();
         StartGame();
-
     }
 
     private void StartGame() {
+        if(random) {
+            gameMode = getRandomInRange(1,4);
+            switch (gameMode) {
+                case 1:
+                case 2:
+                    setRanges();
+                    break;
+                case 3:
+                case 4:
+                    setRanges();
+                    break;
+            }
+        }
         int operand1 = getRandomInRange(minRange, maxRange);
         int operand2 = getRandomInRange(minRange, maxRange);
         switch (gameMode) {
@@ -100,7 +115,7 @@ public class GameScreen extends AppCompatActivity {
         correctAnswer = answers.get(0);
 
         for (int i = 1; i < 4; i++) {
-            answers.add(Integer.toString(getRandomInRange(minRange, maxRange) + Integer.parseInt(answers.get(0))));
+            answers.add(Integer.toString(getRandomInRange(-10, 10) + Integer.parseInt(answers.get(0))));
 
             for (int j = 0; j < i; j++) {
                 if (answers.get(j).equals(answers.get(i))) {
@@ -161,6 +176,46 @@ public class GameScreen extends AppCompatActivity {
             finish();
         }
     }
+
+    public void setRanges() {
+        switch(gameMode) {
+            case 1:
+            case 2:
+                switch(difficulty){
+                    case 1:
+                        minRange = 1;
+                        maxRange = 15;
+                        break;
+                    case 2:
+                        minRange = 15;
+                        maxRange = 30;
+                        break;
+                    case 3:
+                        minRange = 30;
+                        maxRange = 50;
+                        break;
+                }
+                break;
+            case 3:
+            case 4:
+                switch(difficulty){
+                    case 1:
+                        minRange = 1;
+                        maxRange = 10;
+                        break;
+                    case 2:
+                        minRange = 3;
+                        maxRange = 12;
+                        break;
+                    case 3:
+                        minRange = 3;
+                        maxRange = 15;
+                        break;
+                }
+                break;
+        }
+    }
+
     @Override
     public void onBackPressed(){}//disables back button.
 }

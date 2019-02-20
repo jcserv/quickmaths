@@ -8,18 +8,21 @@ import android.view.View;
 public class DifficultyScreen extends AppCompatActivity {
 
     int mode = 0;
+    boolean random = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_difficulty_screen);
         mode = getIntent().getIntExtra("mode", 1);
+        random = getIntent().getBooleanExtra("random",false);
     }
 
     public void easyButtonClick(View v) {
         Intent i = new Intent(getApplicationContext(), GameScreen.class);
         i.putExtra("mode", mode);
-        setRanges(i, 1, 15, 1, 10);
+        i.putExtra("random", random);
+        i.putExtra("difficulty", 1);
         startActivity(i);
         finish();
     }
@@ -27,7 +30,8 @@ public class DifficultyScreen extends AppCompatActivity {
     public void mediumButtonClick(View v) {
         Intent i = new Intent(getApplicationContext(), GameScreen.class);
         i.putExtra("mode", mode);
-        setRanges(i, 15, 30, 7, 12);
+        i.putExtra("random", random);
+        i.putExtra("difficulty", 2);
         startActivity(i);
         finish();
     }
@@ -35,24 +39,9 @@ public class DifficultyScreen extends AppCompatActivity {
     public void hardButtonClick(View v) {
         Intent i = new Intent(getApplicationContext(), GameScreen.class);
         i.putExtra("mode", mode);
-        setRanges(i, 30, 50,7, 15);
+        i.putExtra("random", random);
+        i.putExtra("difficulty", 3);
         startActivity(i);
         finish();
-    }
-
-    public void setRanges(Intent i, int addSubLower, int addSubUpper, int multDivLower, int multDivUpper) {
-        switch(mode) {
-            case 1:
-            case 2:
-                i.putExtra("minRange", addSubLower);
-                i.putExtra("maxRange", addSubUpper);
-                break;
-            case 3:
-            case 4:
-                i.putExtra("minRange", multDivLower);
-                i.putExtra("maxRange", multDivUpper);
-                break;
-
-        }
     }
 }
