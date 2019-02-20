@@ -1,10 +1,12 @@
-package com.example.skelz.quickmaths;
+package org.granvilla.skelz.quickmaths;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Bundle;
 import android.view.Window;
+
+import com.example.skelz.quickmaths.R;
 
 public class MainActivity extends Activity {
 

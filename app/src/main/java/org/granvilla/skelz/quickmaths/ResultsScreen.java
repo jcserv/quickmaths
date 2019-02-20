@@ -1,9 +1,11 @@
-package com.example.skelz.quickmaths;
+package org.granvilla.skelz.quickmaths;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.skelz.quickmaths.R;
 
 import java.util.Locale;
 

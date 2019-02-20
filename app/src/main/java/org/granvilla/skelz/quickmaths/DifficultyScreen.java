@@ -1,9 +1,11 @@
-package com.example.skelz.quickmaths;
+package org.granvilla.skelz.quickmaths;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.skelz.quickmaths.R;
 
 public class DifficultyScreen extends AppCompatActivity {
 
