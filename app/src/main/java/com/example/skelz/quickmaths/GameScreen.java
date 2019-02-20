@@ -27,8 +27,8 @@ public class GameScreen extends AppCompatActivity {
         setContentView(R.layout.activity_game_screen);
 
         gameMode = getIntent().getIntExtra("mode", 1);
-        maxRange = 10;
-        minRange = 1;
+        maxRange = getIntent().getIntExtra("maxRange", 1);
+        minRange = getIntent().getIntExtra("minRange", 10);
 
         StartGame();
 
