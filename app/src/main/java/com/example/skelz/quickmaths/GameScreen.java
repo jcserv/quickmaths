@@ -151,8 +151,7 @@ public class GameScreen extends AppCompatActivity {
             score++;
         }
 
-
-        if(turn < 9) {
+        if(turn < 10) {
             StartGame();
         }
         else{

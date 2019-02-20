@@ -59,5 +59,5 @@ public class GameTypeActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed(){}//disables back button.
+    public void onBackPressed(){moveTaskToBack(true);}//disables back button.
 }
