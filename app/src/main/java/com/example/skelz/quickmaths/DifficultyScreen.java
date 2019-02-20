@@ -21,6 +21,7 @@ public class DifficultyScreen extends AppCompatActivity {
         i.putExtra("mode", mode);
         setRanges(i, 1, 15, 1, 10);
         startActivity(i);
+        finish();
     }
 
     public void mediumButtonClick(View v) {
@@ -28,6 +29,7 @@ public class DifficultyScreen extends AppCompatActivity {
         i.putExtra("mode", mode);
         setRanges(i, 15, 30, 7, 12);
         startActivity(i);
+        finish();
     }
 
     public void hardButtonClick(View v) {
@@ -35,6 +37,7 @@ public class DifficultyScreen extends AppCompatActivity {
         i.putExtra("mode", mode);
         setRanges(i, 30, 50,7, 15);
         startActivity(i);
+        finish();
     }
 
     public void setRanges(Intent i, int addSubLower, int addSubUpper, int multDivLower, int multDivUpper) {

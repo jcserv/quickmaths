@@ -23,4 +23,6 @@ public class MainActivity extends Activity {
             }
         }, 2500);
     }
+    @Override
+    public void onBackPressed(){}
 }
