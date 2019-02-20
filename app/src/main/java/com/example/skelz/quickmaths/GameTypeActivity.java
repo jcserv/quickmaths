@@ -2,6 +2,7 @@ package com.example.skelz.quickmaths;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -11,6 +12,7 @@ public class GameTypeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_type);
     }
@@ -43,4 +45,7 @@ public class GameTypeActivity extends AppCompatActivity {
         i.putExtra("mode", 5);
         startActivity(i);
     }
+
+    @Override
+    public void onBackPressed(){}//disables back button.
 }
