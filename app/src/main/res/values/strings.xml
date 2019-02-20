@@ -11,4 +11,15 @@
     <string name="hardButton">HARD</string>
     <string name="mode">MODE SELECT</string>
     <string name="difficulty">DIFFICULTY</string>
+    <string name="_1">1</string>
+    <string name="expressiondisplay">expressionDisplay</string>
+    <string name="Title">QUICKMATHS</string>
+    <string name="_10_10">10/10</string>
+    <string name="textview">TextView</string>
+    <string name="done">Done</string>
+    <string name="completionMessage1">You can do better than that!</string>
+    <string name="completionMessage2">There\'s room for improvement.</string>
+    <string name="completionMessage3">Wow! You Rock!</string>
+    <string name="completionMessage4">Perfect! Congrats!</string>
+    <string name="scoreString">/10</string>
 </resources>

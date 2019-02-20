@@ -1,5 +1,6 @@
 package com.example.skelz.quickmaths;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,38 +51,38 @@ public class GameScreen extends AppCompatActivity {
                 break;
         }
 
-        Button display = (Button)findViewById(R.id.answerButton1);
+        Button display = findViewById(R.id.answerButton1);
         display.setText(answers.get(0));
-        display = (Button)findViewById(R.id.answerButton2);
+        display = findViewById(R.id.answerButton2);
         display.setText(answers.get(1));
-        display = (Button)findViewById(R.id.answerButton3);
+        display = findViewById(R.id.answerButton3);
         display.setText(answers.get(2));
-        display = (Button)findViewById(R.id.answerButton4);
+        display = findViewById(R.id.answerButton4);
         display.setText(answers.get(3));
 
-        TextView question = (TextView) findViewById(R.id.expressionDisplay);
+        TextView question = findViewById(R.id.expressionDisplay);
 
         switch (gameMode) {
             case 1:
-                question.setText(Integer.toString(operand1) + "+" + Integer.toString(operand2));
+                question.setText(Integer.toString(operand1) + " + " + Integer.toString(operand2));
                 break;
             case 2:
-                question.setText(Integer.toString(operand1) + "-" + Integer.toString(operand2));
+                question.setText(Integer.toString(operand1) + " - " + Integer.toString(operand2));
                 break;
             case 3:
-                question.setText(Integer.toString(operand1) + "×" + Integer.toString(operand2));
+                question.setText(Integer.toString(operand1) + " × " + Integer.toString(operand2));
                 break;
             case 4:
-                question.setText(Integer.toString(operand1) + "/" + Integer.toString(operand2));
+                question.setText(Integer.toString(operand1) + " / " + Integer.toString(operand2));
                 break;
             default:
-                question.setText(Integer.toString(operand1) + "+" + Integer.toString(operand2));
+                question.setText(Integer.toString(operand1) + " + " + Integer.toString(operand2));
                 break;
         }
 
     }
 
-    private ArrayList<String> createAnswersAddSub(int operand1, int operand2) {
+    private void createAnswersAddSub(int operand1, int operand2) {
 
         answers.clear();
 
@@ -110,10 +111,9 @@ public class GameScreen extends AppCompatActivity {
             }
         }
         Collections.shuffle(answers);
-        return answers;
     }
 
-    private ArrayList<String> createAnswersMulDiv(int operand1, int operand2) {
+    private void createAnswersMulDiv(int operand1, int operand2) {
 
         answers.clear();
         switch (gameMode) {
@@ -134,7 +134,6 @@ public class GameScreen extends AppCompatActivity {
         }
         correctAnswer = answers.get(0);
         Collections.shuffle(answers);
-        return answers;
     }
 
     public static int getRandomInRange(int min, int max) {
@@ -150,7 +149,17 @@ public class GameScreen extends AppCompatActivity {
         turn++;
         if(buttonPressed.getText().equals(correctAnswer)){
             score++;
+        }
+
+
+        if(turn < 9) {
             StartGame();
+        }
+        else{
+            Intent i = new Intent(getApplicationContext(), ResultsScreen.class);
+            i.putExtra("score", score);
+            startActivity(i);
+            finish();
         }
     }
     @Override

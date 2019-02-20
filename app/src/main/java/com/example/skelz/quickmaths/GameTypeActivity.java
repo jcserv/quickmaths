@@ -1,11 +1,8 @@
 package com.example.skelz.quickmaths;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.view.View;
 
 public class GameTypeActivity extends AppCompatActivity {
