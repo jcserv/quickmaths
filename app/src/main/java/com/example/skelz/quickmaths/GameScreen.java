@@ -117,7 +117,7 @@ public class GameScreen extends AppCompatActivity {
         for (int i = 1; i < 4; i++) {
             answers.add(Integer.toString(getRandomInRange(-10, 10) + Integer.parseInt(answers.get(0))));
 
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++) {//remove and get new number if already part of answers.
                 if (answers.get(j).equals(answers.get(i))) {
                     answers.remove(i);
                     i--;
