@@ -22,4 +22,8 @@
     <string name="completionMessage3">Wow! You Rock!</string>
     <string name="completionMessage4">Perfect! Congrats!</string>
     <string name="scoreString">/10</string>
+    <string name="authors">AUTHORS</string>
+    <string name="anthony">Anthony Granic</string>
+    <string name="jarrod">Jarrod Servilla</string>
+    <string name="dismiss">DISMISS</string>
 </resources>

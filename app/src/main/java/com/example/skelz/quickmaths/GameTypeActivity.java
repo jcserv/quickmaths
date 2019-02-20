@@ -1,11 +1,13 @@
 package com.example.skelz.quickmaths;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 public class GameTypeActivity extends AppCompatActivity {
+    AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +41,21 @@ public class GameTypeActivity extends AppCompatActivity {
     }
     public void randomButtonClick(View v) {
         Intent i = new Intent(getApplicationContext(), GameScreen.class);
-        i.putExtra("mode", 5);
+        i.putExtra("mode", GameScreen.getRandomInRange(1, 4));
         startActivity(i);
+    }
+
+    public void creditsButtonClick(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(GameTypeActivity.this);
+        View mView = getLayoutInflater().inflate(R.layout.credits_dialog, null);
+        builder.setView(mView);
+        dialog = builder.create();
+        dialog.show();
+        dialog.getWindow().setLayout(1000, 800);
+    }
+
+    public void dismissButtonClick(View v) {
+        dialog.hide();
     }
 
     @Override
