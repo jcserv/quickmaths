@@ -17,30 +17,30 @@ public class GameTypeActivity extends AppCompatActivity {
     }
 
     public void addButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), GameScreen.class);
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
         i.putExtra("mode", 1);
         startActivity(i);
     }
 
     public void subButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), GameScreen.class);
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
         i.putExtra("mode", 2);
         startActivity(i);
     }
 
     public void multButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), GameScreen.class);
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
         i.putExtra("mode", 3);
         startActivity(i);
     }
 
     public void divButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), GameScreen.class);
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
         i.putExtra("mode", 4);
         startActivity(i);
     }
     public void randomButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), GameScreen.class);
+        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
         i.putExtra("mode", GameScreen.getRandomInRange(1, 4));
         startActivity(i);
     }

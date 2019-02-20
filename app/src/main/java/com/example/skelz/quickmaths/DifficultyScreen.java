@@ -17,21 +17,21 @@ public class DifficultyScreen extends AppCompatActivity {
     }
 
     public void easyButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
+        Intent i = new Intent(getApplicationContext(), GameScreen.class);
         i.putExtra("mode", mode);
         setRanges(i, 1, 15, 1, 10);
         startActivity(i);
     }
 
     public void mediumButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
+        Intent i = new Intent(getApplicationContext(), GameScreen.class);
         i.putExtra("mode", mode);
         setRanges(i, 15, 30, 7, 12);
         startActivity(i);
     }
 
     public void hardButtonClick(View v) {
-        Intent i = new Intent(getApplicationContext(), DifficultyScreen.class);
+        Intent i = new Intent(getApplicationContext(), GameScreen.class);
         i.putExtra("mode", mode);
         setRanges(i, 30, 50,7, 15);
         startActivity(i);
